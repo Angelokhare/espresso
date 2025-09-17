@@ -1,10 +1,10 @@
 .app-wrapper{
-  background-color: #fcebde;
+  background-color: #ffe7e9;
 }
 
 body{
 
-  background-color: #fcebde;
+  background-color: #ffe7e9;
 }
 
 
@@ -83,9 +83,9 @@ body{
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 12px 24px;
-  border: 2px solid #451f17;
+  border: 2px solid #000;
   border-radius: 10px;
-  background-color: #b67237;
+  background-color: #000;
   color: #fff;
   font-weight: bold;
   font-size: 18px;
@@ -94,8 +94,9 @@ body{
 }
 
 .reset-button:hover {
-  background-color: #b67237;
-  color: #fff;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
 }
 
 /* === Level-based scaling === */
@@ -123,7 +124,7 @@ body{
 /* === Loading screen === */
 .loading-container {
   height: 100vh;
-  background-color: #de9e67;
+  background-color: #fc698e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,7 +152,7 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #2a0b04;
+  background-color: #000;
   color: #fff;
   text-align: center;
   font-weight: 600;
@@ -162,7 +163,7 @@ body{
   z-index: 100;
 }
 .footer a {
-  color: #f0e89D;
+  color: #fc698e;
   text-decoration: none;
 }
 
@@ -192,7 +193,7 @@ body{
 
 .fail-content {
   position: relative;
-  background: #fcebde;
+  background: #fff;
   padding: 40px 20px 20px 20px;
   border-radius: 16px;
   text-align: center;
@@ -225,9 +226,9 @@ body{
   display: block;
   margin: 0 auto;
   padding: 12px 24px;
-  border: 2px solid #451f17;
+  border: 2px solid #000;
   border-radius: 10px;
-  background-color: #2a0b04;
+  background-color: #000;
   color: #fff;
   font-weight: bold;
   font-size: 18px;
@@ -236,7 +237,11 @@ body{
 }
 
 .fail-content .reset-button:hover {
-  background-color: #e4d7f7;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+
+
 }
 
 /* Floating close button on top right */

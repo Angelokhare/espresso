@@ -2,12 +2,13 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
-import espressoQuestions from './data/espressoQuestions';
+import sentientQuestions from './data/sentientQuestions';
 
 const symbols = [
-  '/images/m1.avif', '/images/m2.avif', '/images/m3.avif', '/images/m4.avif', '/images/m5.avif',
-  '/images/m6.avif', '/images/m7.avif', '/images/m8.avif',
-  '/images/m9.avif', '/images/m10.avif', '/images/m11.avif', '/images/m12.avif', '/images/m13.avif', '/images/m14.avif', '/images/m15.avif', '/images/m16.avif',
+  '/images/m1.png', '/images/m2.png', '/images/m3.png', '/images/m4.png', '/images/m5.png',
+  '/images/m6.png', '/images/m7.png', '/images/m8.png',
+  '/images/m9.png', '/images/m10.png', '/images/m11.png', 
+  // '/images/m12.avif', '/images/m13.avif', '/images/m14.avif', '/images/m15.avif', '/images/m16.avif',
   // '/images/m17.png', '/images/m18.png', '/images/m19.png', '/images/m20.png', '/images/m21.png'
 ];
 
@@ -36,7 +37,7 @@ const App: React.FC = () => {
   const [startTime, setStartTime] = useState<number>(Date.now());
   const [showFailPopup, setShowFailPopup] = useState(false);
   const [showQuiz, setShowQuiz] = useState(false);
-  const [quizQuestions, setQuizQuestions] = useState<typeof espressoQuestions>([]);
+  const [quizQuestions, setQuizQuestions] = useState<typeof sentientQuestions>([]);
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [answerState, setAnswerState] = useState<QuizAnswerState>({ selectedOption: null, isCorrect: null });
   const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
@@ -181,7 +182,7 @@ const App: React.FC = () => {
 
   const handleEarnTrialsClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const shuffled = [...espressoQuestions].sort(() => Math.random() - 0.5).slice(0, 3);
+    const shuffled = [...sentientQuestions].sort(() => Math.random() - 0.5).slice(0, 3);
     setQuizQuestions(shuffled);
     setCurrentQuizIndex(0);
     setCorrectAnswersCount(0);
@@ -251,7 +252,7 @@ const App: React.FC = () => {
   return (
     <div className="app-wrapper">
       <div className="App" style={{ textAlign: 'center', padding: 20 }}>
-        <h1>EspressoFlip Challenge ☕️</h1>
+        <h1>Sentient Flip Challenge</h1>
         <h3 style={{ marginTop: 0, color: '#444' }}>Level {pairCount - 1}</h3>
         <p>Trials: {trials} | Score: {score}</p>
         {message && <h2>{message}</h2>}
@@ -294,7 +295,7 @@ const App: React.FC = () => {
             >
               Click here to earn more trials
             </p>
-            <img className="fail-image" src="/images/cry.avif" alt="Fail" />
+            <img className="fail-image" src="/images/cry.png" alt="Fail" />
             <button className="reset-button" onClick={resetGame}>
               Try Again??
             </button>
@@ -373,7 +374,7 @@ const App: React.FC = () => {
       )}
 
       <footer className="footer">
-        Caffeinated with 🤎 by {' '}
+      Innovated with 🤍 by {' '}
         <a 
               style={{cursor: 'pointer' }}
         
